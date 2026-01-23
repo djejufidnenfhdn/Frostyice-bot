@@ -44,7 +44,7 @@ let handler = async (m, { conn }) => {
       contextInfo: {
         externalAdReply: {
           title: "📡 Stato del Bot",
-          body: "√乇ﾒ乃のｲ // 𝚅𝚎𝚡-𝙱𝚘𝚝",
+          body: "𝐈𝐂𝐘-𝐁𝐎𝐓",
           mediaType: 1,
           thumbnail: thumbBuffer ?? undefined, // 🟡 MINIATURA
           // rimosso renderLargerThumbnail → ora è piccola
