@@ -17,8 +17,6 @@ const handler = async (message, { conn, usedPrefix, command }) => {
 
   const menuText = generateMenuText(usedPrefix, botName, userCount, userId, groupId)
 
-  const imagePath = path.join(__dirname, '../media/principale.jpeg')
-
   const footerText = global.t('menuFooter', userId, groupId) || 'Scegli un menu:'
   const adminMenuText = global.t('menuAdmin', userId, groupId) || '🛡️ Menu Admin'
   const ownerMenuText = global.t('menuOwner', userId, groupId) || '👑 Menu Owner'
@@ -29,8 +27,7 @@ const handler = async (message, { conn, usedPrefix, command }) => {
   await conn.sendMessage(
     message.chat,
     {
-      image: { url: imagePath },
-      caption: menuText,
+      text: menuText,
       footer: footerText,
       buttons: [
         { buttonId: `${usedPrefix}menuadmin`, buttonText: { displayText: adminMenuText }, type: 1 },
@@ -39,8 +36,7 @@ const handler = async (message, { conn, usedPrefix, command }) => {
         { buttonId: `${usedPrefix}menugruppo`, buttonText: { displayText: groupMenuText }, type: 1 },
         { buttonId: `${usedPrefix}menuia`, buttonText: { displayText: aiMenuText }, type: 1 }
       ],
-      viewOnce: true,
-      headerType: 4
+      headerType: 1
     }
   )
 }
@@ -84,7 +80,7 @@ function generateMenuText(prefix, botName, userCount, userId, groupId) {
 ┃◈┃
 ┃◈└───────────┈⊷
 ┃◈┃• *${versionText}:* ${vs}
-┃◈┃•  𝐂𝐎𝐋𝐋𝐀𝐁: ${collab}
+┃◈┃• ${collabLabel}: ${collab}
 ┃◈┃• *${supportText}:* (.supporto)
 ╰━━━━━━━━━━━━━┈·๏
 `.trim()
