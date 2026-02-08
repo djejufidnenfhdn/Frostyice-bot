@@ -12,13 +12,11 @@ const handler = async (message, { conn, usedPrefix, command }) => {
   const nomeDelBot = conn.user?.name || global.db?.data?.nomedelbot || 'ChatUnity'
 
   const menuText = generateMenuText(usedPrefix, userId, groupId)
-  const imagePath = path.join(__dirname, '../media/gruppo.jpeg')
 
   await conn.sendMessage(
     message.chat,
     {
-      image: { url: imagePath },
-      caption: menuText,
+      text: menuText,
       contextInfo: {
         forwardingScore: 999,
         isForwarded: true,
@@ -61,7 +59,7 @@ function generateMenuText(prefix, userId, groupId) {
 🎥 *.playlist*
 🎥 *.ytsearch*
 🔊 *.tomp3* (${global.t('videoCommand', userId, groupId)})
-    `
+      `
     ),
     createSection(
       global.t('infoUtilitySection', userId, groupId),
@@ -73,16 +71,16 @@ function generateMenuText(prefix, userId, groupId) {
 📜 *.dashboard*
 🔍 *.cercaimmagine*
 🛡️ *.offusca*
-    `
+      `
     ),
     createSection(
       global.t('imageEditSection', userId, groupId),
       `
 🛠️ *.sticker* (${global.t('photoToStickerCommand', userId, groupId)})
 📷 *.hd* (${global.t('improveQualityCommand', userId, groupId)})
-🤕 *.bonk* (${global.t('memeCommand', userId, groupId)})
-🖼️ *.toimg* (${global.t('fromStickerCommand', userId, groupId)})
-🎴 *.hornycard* [@${global.t('userCommand', userId, groupId)}]
+🤕 *.bonk*
+🖼️ *.toimg*
+🎴 *.hornycard* @
 🧠 *.stupido/a* @
 🌀 *.emojimix*
 🎯 *.wanted* @
@@ -90,13 +88,13 @@ function generateMenuText(prefix, userId, groupId) {
 📱 *.nokia* @
 🚔 *.carcere* @
 📢 *.ads* @
-    `
+      `
     ),
     createSection(
       global.t('pokemonSection', userId, groupId),
       `
 🥚 *.apripokemon*
-🛒 *.buypokemon* 
+🛒 *.buypokemon*
 🏆 *.classificapokemon*
 🎁 *.pacchetti*
 ⚔️ *.combatti*
@@ -105,7 +103,7 @@ function generateMenuText(prefix, userId, groupId) {
 🎒 *.inventario*
 🍀 *.pity*
 🔄 *.scambia*
-    `
+      `
     ),
     createSection(
       global.t('gamesCasinoSection', userId, groupId),
@@ -114,52 +112,52 @@ function generateMenuText(prefix, userId, groupId) {
 🎲 *.dado*
 🎰 *.slot*
 🏏 *.casinò*
-💰 *.scommessa* (${global.t('quantityCommand', userId, groupId)})
+💰 *.scommessa*
 💰 *.blackjack*
 💰 *.wordle*
 🔫 *.roulette*
-🪙 *.moneta* (${global.t('headsOrTailsCommand', userId, groupId)})
-🧮 *.mate* (${global.t('mathProblemCommand', userId, groupId)})
-📈 *.scf* (${global.t('rockPaperScissorsCommand', userId, groupId)})
-🐾 *.pokedex* (${global.t('pokemonInfoCommand', userId, groupId)})
+🪙 *.moneta*
+🧮 *.mate*
+📈 *.scf*
+🐾 *.pokedex*
 🏳️ *.bandiera*
 🎶 *.indovinacanzone*
 🤖 *.auto*
 🎯 *.missioni*
-    `
+      `
     ),
     createSection(
       global.t('economyRankingSection', userId, groupId),
       `
-💰 *.portafoglio* (${global.t('balanceCommand', userId, groupId)})
+💰 *.portafoglio*
 🏦 *.banca*
 💸 *.daily*
-🏆 *.topuser* (${global.t('topUsersCommand', userId, groupId)})
+🏆 *.topuser*
 🏆 *.topgruppi*
 💳 *.donauc*
-🤑 *.ruba* @${global.t('userCommand', userId, groupId)}
-📤 *.ritira* (${global.t('withdrawUCCommand', userId, groupId)})
-⛏️ *.mina* (${global.t('earnXPCommand', userId, groupId)})
+🤑 *.ruba* @
+📤 *.ritira*
+⛏️ *.mina*
 📊 *.xp*
-♾️ *.donaxp* @${global.t('userCommand', userId, groupId)}
-🎯 *.rubaxp* @${global.t('userCommand', userId, groupId)}
-    `
+♾️ *.donaxp* @
+🎯 *.rubaxp* @
+      `
     ),
     createSection(
       global.t('socialInteractionSection', userId, groupId),
       `
-💔 *.divorzia* (${global.t('endRelationshipCommand', userId, groupId)})
-💌 *.amore* @${global.t('userCommand', userId, groupId)} (${global.t('affinityCommand', userId, groupId)})
-💋 *.bacia* @${global.t('userCommand', userId, groupId)}
-😡 *.odio* @${global.t('userCommand', userId, groupId)}
-🗣️ *.rizz* @${global.t('userCommand', userId, groupId)} (${global.t('charmCommand', userId, groupId)})
-☠️ *.minaccia* @${global.t('userCommand', userId, groupId)}
-🔥 *.zizzania* @${global.t('userCommand', userId, groupId)} (${global.t('createFightCommand', userId, groupId)})
+💔 *.divorzia*
+💌 *.amore* @
+💋 *.bacia* @
+😡 *.odio* @
+🗣️ *.rizz* @
+☠️ *.minaccia* @
+🔥 *.zizzania* @
 💋 *.ditalino* @
 💋 *.sega* @
 🖕 *.insulta* @
-👥 *.amicizia/listamici* @
-    `
+👥 *.amicizia / listamici* @
+      `
     ),
     createSection(
       global.t('howMuchSection', userId, groupId),
@@ -172,14 +170,14 @@ function generateMenuText(prefix, userId, groupId) {
 ♿ *.mongoloide* @
 ⚫ *.negro* @
 🐓 *.cornuto* @
-    `
+      `
     ),
     createSection(
       global.t('personalityTestSection', userId, groupId),
       `
 🍺 *.alcolizzato*
 🌿 *.drogato*
-    `
+      `
     )
   ]
 
