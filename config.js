@@ -5,9 +5,9 @@ import { fileURLToPath } from 'url';
 
 global.botnumber = '';
 global.confirmCode = '';
-global.nomebot = '𝐈𝐂𝐘-𝐁𝐎𝐓';
-global.packname = '𝐈𝐂𝐘-𝐁𝐎𝐓';
-global.author = '𝐌𝐝';
+global.nomebot = '𝐋𝐈𝐓𝐇𝐈𝐔𝐌-𝐁𝐎𝐓';
+global.packname = '𝐋𝐈𝐓𝐇𝐈𝐔𝐌';
+global.author = '𝐁𝐎𝐓';
 global.vs = '1.0';
 global.collab = 'ᴅᴛʜ-ʙᴏᴛ';
 global.wm = global.nomebot;
