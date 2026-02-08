@@ -1,4 +1,3 @@
-
 import 'os'
 import 'util'
 import 'human-readable'
@@ -18,21 +17,23 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   const chat = global.db.data.chats[m.chat] || {}
 
   const menuText = generateMenuText(chat, userId, groupId)
-  const imagePath = path.join(__dirname, '../media/sicurezza.jpeg')
+
+  const adminMenuText = global.t('adminMenuButton', userId, groupId) || '🛡️ Menu Admin'
+  const ownerMenuText = global.t('ownerMenuButton', userId, groupId) || '👑 Menu Owner'
+  const groupMenuText = global.t('groupMenuButton', userId, groupId) || '👥 Menu Gruppo'
+  const aiMenuText = global.t('aiMenuButton', userId, groupId) || '🤖 Menu IA'
 
   await conn.sendMessage(m.chat, {
-    image: { url: imagePath },
-    caption: menuText,
+    text: menuText,
     footer: global.t('chooseMenu', userId, groupId) || 'Scegli un menu:',
     buttons: [
       { buttonId: `${usedPrefix}menu`, buttonText: { displayText: global.t('mainMenuButton', userId, groupId) || '🏠 Menu Principale' }, type: 1 },
-        { buttonId: `${usedPrefix}menuadmin`, buttonText: { displayText: adminMenuText }, type: 1 },
-        { buttonId: `${usedPrefix}menuowner`, buttonText: { displayText: ownerMenuText }, type: 1 },
-        { buttonId: `${usedPrefix}menugruppo`, buttonText: { displayText: groupMenuText }, type: 1 },
-        { buttonId: `${usedPrefix}menuia`, buttonText: { displayText: aiMenuText }, type: 1 }
+      { buttonId: `${usedPrefix}menuadmin`, buttonText: { displayText: adminMenuText }, type: 1 },
+      { buttonId: `${usedPrefix}menuowner`, buttonText: { displayText: ownerMenuText }, type: 1 },
+      { buttonId: `${usedPrefix}menugruppo`, buttonText: { displayText: groupMenuText }, type: 1 },
+      { buttonId: `${usedPrefix}menuia`, buttonText: { displayText: aiMenuText }, type: 1 }
     ],
-    viewOnce: true,
-    headerType: 4
+    headerType: 1
   })
 }
 
@@ -44,9 +45,8 @@ export default handler
 
 function generateMenuText(chat, userId, groupId) {
   const vs = global.vs || '8.0'
-  const menuTitle = global.t('securityMenuTitle', userId, groupId) || '𝑴𝑬𝑵𝑼 𝐅𝐔𝐍𝐙𝐈𝐎𝐍𝐈'
+  const menuTitle = global.t('securityMenuTitle', userId, groupId) || '𝑴𝑬𝑵𝑼 𝐒𝐈𝐂𝐔𝐑𝐄𝐙𝐙𝐀'
   const versionText = global.t('versionLabel', userId, groupId) || '𝑽𝑬𝑹𝑺𝑰𝑶𝑵𝑬'
-  const collabText = global.t('collabLabel', userId, groupId) || '𝐂𝐎𝐋𝐋𝐀𝐁: 𝐎𝐍𝐄 𝐏𝐈𝐄𝐂𝐄'
   const supportText = global.t('supportLabel', userId, groupId) || '𝐒𝐔𝐏𝐏𝐎𝐑𝐓𝐎'
 
   const functions = {
@@ -63,7 +63,7 @@ function generateMenuText(chat, userId, groupId) {
     JadiBot: !!chat?.jadibot,
     SoloGruppo: !!chat?.sologruppo,
     SoloPrivato: !!chat?.soloprivato,
-    soloadmin: !!chat?.soloadmin,
+    Soloadmin: !!chat?.soloadmin,
     BanGruppo: !!chat?.isBanned,
     Antiporno: !!chat?.antiporno,
     AntiCall: !!chat?.antiCall,
@@ -76,13 +76,13 @@ function generateMenuText(chat, userId, groupId) {
   }
 
   const howToUse = `
-*ℹ ${global.t('howToUse', userId, groupId) || '𝐂𝐎𝐌𝐄 𝐒𝐈 𝐔𝐒𝐀'}*
-*🟢 ${global.t('activateFunction', userId, groupId) || 'attiva [funzione]'}*
-*🔴 ${global.t('disableFunction', userId, groupId) || 'disabilita [funzione]'}*
+*ℹ ${global.t('howToUse', userId, groupId) || 'COME SI USA'}*
+🟢 attiva [funzione]
+🔴 disabilita [funzione]
   `.trim()
 
   const statusList = Object.entries(functions)
-    .map(([name, state]) => `${state ? '🟢' : '🔴'} - *${name}*`)
+    .map(([name, state]) => `${state ? '🟢' : '🔴'} *${name}*`)
     .join('\n')
 
   return `
@@ -96,7 +96,6 @@ ${statusList.split('\n').map(line => `୧ ${line}`).join('\n')}
 
 ╰♡꒷ ๑ ⋆˚₊⋆───ʚ˚ɞ───⋆˚₊⋆ ๑ ⪩
   ୧・*${versionText}:* ${vs}
-  ୧・𝐂𝐎𝐋𝐋𝐀𝐁: ${collabText}
   ୧・*${supportText}:* (.supporto)
 ╰♡꒷ ๑ ⋆˚₊⋆───ʚ˚ɞ───⋆˚₊⋆ ๑ ⪩
 `.trim()
