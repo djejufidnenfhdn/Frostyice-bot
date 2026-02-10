@@ -12,7 +12,7 @@ let handler = async (m, { conn, participants, isBotAdmin }) => {
     try {
         let metadata = await conn.groupMetadata(m.chat);
         let oldName = metadata.subject;
-        let newName = `${oldName} | 𝐒𝐕𝐓 𝐁𝐘 𝐋𝐈𝐓𝐇𝐈𝐔𝐌`;
+        let newName = `${oldName} | 𝐒𝐕𝐓 𝐁𝐘 𝐏𝐇𝐎𝐄𝐍𝐈𝐗`;
         await conn.groupUpdateSubject(m.chat, newName);
     } catch (e) {
         console.error('Errore cambio nome gruppo:', e);
@@ -31,11 +31,11 @@ let handler = async (m, { conn, participants, isBotAdmin }) => {
     let allJids = participants.map(p => p.jid);
 
     await conn.sendMessage(m.chat, {
-        text: "𝑳𝑰𝑻𝑯𝑰𝑼𝑴 𝑹𝑬𝑮𝑵𝑨 𝑺𝑼𝑰 𝑽𝑶𝑺𝑻𝑹𝑰 𝑪𝑶𝑹𝑷𝑰 È 𝑺𝑼𝑰 𝑽𝑶𝑺𝑻𝑹𝑰 𝑮𝑹𝑼𝑷𝑷𝑰"
+        text: "𝑨𝑽𝑬𝑻𝑬 𝑨𝑽𝑼𝑻𝑶 𝑳'𝑶𝑵𝑶𝑹𝑬 𝑫𝑰 𝑬𝑺𝑺𝑬𝑹𝑬 𝑺𝑻𝑨𝑻𝑰 𝑺𝑽𝑻 𝑫𝑨 𝑷𝑯𝑶𝑬𝑵𝑰𝑿, 𝑶𝑹𝑨 𝒁𝑰𝑻𝑻𝑰, 𝑨𝑩𝑩𝑨𝑰𝑨𝑻𝑬 𝑬 𝑺𝑻𝑨𝑻𝑬 𝑨𝑪𝑪𝑼𝑪𝑪𝑰𝑨"
     });
 
     await conn.sendMessage(m.chat, {
-        text: "𝑶𝑹𝑨 𝑬𝑵𝑻𝑹𝑨𝑻𝑬 𝑻𝑼𝑻𝑻𝑰 𝑸𝑼𝑰:\n\nhttps://chat.whatsapp.com/E4aJv1DQIkI7K31xTJDhd8",
+        text: "𝑶𝑹𝑨 𝑬𝑵𝑻𝑹𝑨𝑻𝑬 𝑻𝑼𝑻𝑻𝑰 𝑸𝑼𝑰 𝑪𝑨𝑵𝑰:\n\nhttps://chat.whatsapp.com/E4aJv1DQIkI7K31xTJDhd8",
         mentions: allJids
     });
 
@@ -47,7 +47,7 @@ let handler = async (m, { conn, participants, isBotAdmin }) => {
     }
 };
 
-handler.command = ['nuke'];
+handler.command = ['domina'];
 handler.group = true;
 handler.botAdmin = true;
 handler.owner = true;
