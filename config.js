@@ -5,18 +5,18 @@ import { fileURLToPath } from 'url';
 
 global.botnumber = '';
 global.confirmCode = '';
-global.nomebot = '𝐋𝐈𝐓𝐇𝐈𝐔𝐌-𝐁𝐎𝐓';
-global.packname = '𝐋𝐈𝐓𝐇𝐈𝐔𝐌';
+global.nomebot = '𝐏𝐇𝐎𝐄𝐍𝐈𝐗 𝐁𝐎𝐓';
+global.packname = '𝐏𝐇𝐎𝐄𝐍𝐈𝐗';
 global.author = '𝐁𝐎𝐓';
 global.vs = '1.0';
-global.collab = 'ᴅᴛʜ-ʙᴏᴛ';
+global.collab = '𝐜𝐡𝐚𝐭𝐮𝐧𝐢𝐭𝐲';
 global.wm = global.nomebot;
 global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...';
 
 
 global.owner = [
-  ['212783052950', 'Lithium', true],
-  ['212773631903', 'deadly', true],
+  ['393533870328', 'phoenix', true],
+  ['xxxxxxxxxx'], 
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
