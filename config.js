@@ -5,11 +5,11 @@ import { fileURLToPath } from 'url';
 
 global.botnumber = '';
 global.confirmCode = '';
-global.nomebot = '𝐏𝐇𝐎𝐄𝐍𝐈𝐗 𝐁𝐎𝐓';
-global.packname = '𝐏𝐇𝐎𝐄𝐍𝐈𝐗';
+global.nomebot = '⇨𝐏𝐇𝐎𝐄𝐍𝐈𝐗 𝐁𝐎𝐓⇦';
+global.packname = '⇨𝐏𝐇𝐎𝐄𝐍𝐈𝐗⇦';
 global.author = '𝐁𝐎𝐓';
 global.vs = '1.0';
-global.collab = '𝐜𝐡𝐚𝐭𝐮𝐧𝐢𝐭𝐲';
+global.collab = 'phoenix';
 global.wm = global.nomebot;
 global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...';
 
