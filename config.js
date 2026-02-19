@@ -5,17 +5,17 @@ import { fileURLToPath } from 'url';
 
 global.botnumber = '';
 global.confirmCode = '';
-global.nomebot = '⇨𝐏𝐇𝐎𝐄𝐍𝐈𝐗 𝐁𝐎𝐓⇦';
-global.packname = '⇨𝐏𝐇𝐎𝐄𝐍𝐈𝐗⇦';
+global.nomebot = '⇨#𝐌𝐀𝐋𝐓𝐑𝐀𝐓𝐓𝐀𝐑𝐄 𝐁𝐎𝐓⇦';
+global.packname = '⇨╰◡╯#𝐌𝐀𝐋𝐓𝐑𝐀𝐓𝐓𝐀𝐑𝐄╰◡╯⇦';
 global.author = '𝐁𝐎𝐓';
 global.vs = '1.0';
-global.collab = 'phoenix';
+global.collab = '╰◡╯';
 global.wm = global.nomebot;
 global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...';
 
 
 global.owner = [
-  ['393533870328', 'phoenix', true],
+  ['212771108425', '#𝐌𝐀𝐋𝐓𝐑𝐀𝐓𝐓𝐀𝐑𝐄', true],
   ['xxxxxxxxxx'], 
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
