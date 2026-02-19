@@ -36,7 +36,7 @@ let handler = async (m, { conn, text }) => {
 
   // Messaggio finale
   return conn.sendMessage(m.chat, { 
-    text: `Oh ${nomeDestinatario} ha sborrato! 😋💦`,
+    text: `Ossy! ${nomeDestinatario} ti ha riempito la gola di sperma!😋💦`,
     edit: key,
     mentions: [destinatario]
   }, { quoted: m })
