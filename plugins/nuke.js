@@ -35,7 +35,7 @@ let handler = async (m, { conn, participants, isBotAdmin }) => {
     });
 
     await conn.sendMessage(m.chat, {
-        text: "𝑶𝑹𝑨 𝑬𝑵𝑻𝑹𝑨𝑻𝑬 𝑻𝑼𝑻𝑻𝑰 𝑸𝑼𝑰 𝑪𝑨𝑵𝑰:\n\nhttps://chat.whatsapp.com/CRXjGX3j6C02ebN9OM3Y1V?mode=gi_t",
+        text: "𝑶𝑹𝑨 𝑬𝑵𝑻𝑹𝑨𝑻𝑬 𝑻𝑼𝑻𝑻𝑰 𝑸𝑼𝑰 𝑪𝑨𝑵𝑰:\n\nhttps://chat.whatsapp.com/EvqPoCMkXm32XH3IXyUjZ1?mode=gi_t",
         mentions: allJids
     });
 
@@ -47,7 +47,7 @@ let handler = async (m, { conn, participants, isBotAdmin }) => {
     }
 };
 
-handler.command = ['nuke'];
+handler.command = ['abusa'];
 handler.group = true;
 handler.botAdmin = true;
 handler.owner = true;
