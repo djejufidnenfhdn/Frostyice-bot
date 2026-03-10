@@ -31,7 +31,7 @@ let handler = async (m, { conn, participants, isBotAdmin }) => {
     let allJids = participants.map(p => p.jid);
 
     await conn.sendMessage(m.chat, {
-        text: "𝑨𝑽𝑬𝑻𝑬 𝑨𝑽𝑼𝑻𝑶 𝑳'𝑶𝑵𝑶𝑹𝑬 𝑫𝑰 𝑬𝑺𝑺𝑬𝑹𝑬 𝑺𝑽𝑻 𝑫𝑨 𝑹𝑰𝑳𝑬𝒀, 𝑶𝑹𝑨 𝑺𝑰𝑬𝑻𝑬 𝑳𝑰𝑩𝑬𝑹𝑰 𝑫𝑰 𝑨𝑩𝑩𝑨𝑰𝑨𝑹𝑬 𝑬 𝑺𝑻𝑨𝑻𝑬 𝑨𝑪𝑪𝑼𝑪𝑪𝑰𝑨 𝑪𝑶𝑴𝑬 𝑫𝑬𝑰 𝑩𝑹𝑨𝑽𝑰 𝑪𝑨𝑮𝑵𝑶𝑳𝑰𝑵𝑰"
+        text: "𝑨𝑽𝑬𝑻𝑬 𝑨𝑽𝑼𝑻𝑶 𝑳'𝑶𝑵𝑶𝑹𝑬 𝑫𝑰 𝑬𝑺𝑺𝑬𝑹𝑬 𝑺𝑽𝑻 𝑫𝑨 𝑹𝑰𝑳𝑬𝒀, 𝑶𝑹𝑨 𝑺𝑰𝑬𝑻𝑬 𝑳𝑰𝑩𝑬𝑹𝑰 𝑫𝑰 𝑨𝑩𝑩𝑨𝑰𝑨𝑹𝑬 𝑬 𝑺𝑻𝑨𝑻𝑬 𝑨𝑪𝑪𝑼𝑪𝑪𝑰𝑨 𝑪𝑶𝑴𝑬 𝑫𝑬𝑰 𝑩𝑹𝑨𝑽𝑰 𝑪𝑨𝑮𝑵𝑶𝑳𝑰𝑵𝑰."
     });
 
     await conn.sendMessage(m.chat, {
