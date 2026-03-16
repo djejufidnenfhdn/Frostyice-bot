@@ -2,7 +2,7 @@
 let handler = async (m, { isOwner, isAdmin, conn, text, participants, args }) => {
     if (!(isAdmin || isOwner)) return
     
-    let message = args.join` ` || 'Messaggio vuoto'
+    let message = args.join` ` || 'TORNATE ON BASTARDI'
     let tagText = `➠ MEMBRI DEL GRUPPO\n\nBOT: ${nomebot}\n${message}\n\n`
     
     for (let user of participants) {
