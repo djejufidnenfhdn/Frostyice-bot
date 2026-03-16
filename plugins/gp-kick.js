@@ -54,7 +54,7 @@ async function handler(m, { isBotAdmin, isOwner, text, conn }) {
   const reason = text ? `\n\n𝐌𝐨𝐭𝐢𝐯𝐨: ${text.replace(/@\d+/g, '').trim()}` : ''
   
   await conn.sendMessage(m.chat, {
-    text: `@${mention.split`@`[0]} è stato mandato a fanculo da @${m.sender.split`@`[0]}${reason}`,
+    text: `@${mention.split`@`[0]} è stato bruciato da @${m.sender.split`@`[0]}${reason}`,
     mentions: [mention, m.sender]
   }, { quoted: m })
 
