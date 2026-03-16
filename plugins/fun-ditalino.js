@@ -25,8 +25,8 @@ let handler = async (m, { conn, text }) => {
 
     // Messaggi personalizzati
     let sequenza = [
-        `🤟🏻 entro due dita dentro per *${nomeDestinatario}*...`,
-        "🤟🏻 Ci siamo quasi...sta per venire",
+        `🤟🏻 faccio un ditalino per *${nomeDestinatario}*...`,
+        "🤟🏻 Ci siamo quasi...stk finendo",
         "👋🏻 sta venendo!!"
     ];
 
@@ -40,7 +40,7 @@ let handler = async (m, { conn, text }) => {
     let endTime = performance.now();
     let elapsedTime = (endTime - startTime).toFixed(2);
 
-    let resultMessage = `✨ *${nomeDestinatario}* è venuta🥵! Sta gemendo fino a finire la voce! *${elapsedTime}ms*!`;
+    let resultMessage = `✨ *${nomeDestinatario}* è venuta🥵! e ti sta schizzando come uno scoglio *${elapsedTime}ms*!`;
 
     conn.reply(m.chat, resultMessage, m, { mentions: [destinatario] });
 };
