@@ -20,7 +20,7 @@ async function shipCommand(sock, chatId, msg, groupMetadata) {
 
         // Create and send the ship message
         await sock.sendMessage(chatId, {
-            text: `${formatMention(firstUser)} ❤️ ${formatMention(secondUser)}\nCongratulations 💖🍻`,
+            text: `${formatMention(firstUser)} e ${formatMention(secondUser)}\nfanno sesso pazzo sotto le coperte di doxbin!!😋`,
             mentions: [firstUser, secondUser]
         });
 
