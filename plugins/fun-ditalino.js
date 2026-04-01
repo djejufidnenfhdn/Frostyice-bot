@@ -26,7 +26,7 @@ let handler = async (m, { conn, text }) => {
     // Messaggi personalizzati
     let sequenza = [
         `🤟🏻 faccio un ditalino per *${nomeDestinatario}*...`,
-        "🤟🏻 Ci siamo quasi...stk finendo",
+        "🤟🏻 Ci siamo quasi...sto finendo",
         "👋🏻 sta venendo!!"
     ];
 
