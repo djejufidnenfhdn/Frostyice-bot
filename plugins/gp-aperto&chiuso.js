@@ -2,7 +2,7 @@ let handler = async (m, { conn, command }) => {
     let isOpen = command === 'aperto'
     await conn.groupSettingUpdate(m.chat, isOpen ? 'not_announcement' : 'announcement')
     await conn.sendMessage(m.chat, {
-        text: isOpen ? '𝐂𝐡𝐚𝐭 𝐚𝐩𝐞𝐫𝐭𝐚 𝐩𝐞𝐫 𝐭𝐮𝐭𝐭𝐢' : '𝐂𝐡𝐚𝐭 𝐩𝐞𝐫 𝐬𝐨𝐥𝐢 𝐚𝐝𝐦𝐢𝐧',
+        text: isOpen ? '𝐩𝐚𝐫𝐥𝐚𝐭𝐞 𝐩𝐮𝐫𝐞, 𝐠𝐫𝐮𝐩𝐩𝐨 𝐚𝐩𝐞𝐫𝐭𝐨 ╰‿╯' : '𝐚𝐝𝐞𝐬𝐬𝐨 𝐩𝐚𝐫𝐥𝐨 𝐢𝐨!',
         contextInfo: {
             forwardingScore: 99,
             isForwarded: true,
