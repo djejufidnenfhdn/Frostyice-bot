@@ -19,7 +19,7 @@ global.owner = [
   ['393514593662' , 'Alessia' , true], 
   ['1 6833331270' , 'soufiane' , true],
   ['393514067387' , 'francesca' , true],
-  ['xxxxxxxxxx'],
+  ['212778776747' , 'NICIOLINA LA CACCHINA' , true],
   ['xxxxxxxxxx']
 ];
 global.mods = ['xxxxxxxxxx'];
