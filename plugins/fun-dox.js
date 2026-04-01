@@ -24,41 +24,23 @@ var hawemod = [
     " INVIO DEI LOG...",
     " DATI INVIATI CON SUCCESSO E Connessione disconnessa",
     "𝐃𝐎𝐗𝐗𝐄𝐃 𝐁𝐘 𝐑𝐈𝐋𝐄𝐘
-
-
-Nome:il suo
-
+    Nome:il suo
 Cognome:quello di suo padre
-
 Anni:quelli della sua data di nascita
-
 Data di nascita:la sua
-
 Via di casa:via dalle palle 104
-
 Numero telefonico:il suo della sua SIM
-
 Numero VoIP:quello di SMS virtual 
-
 Numero presta:quello rubato
-
-Facebook: https://facebook.ilsuo/com
-
-<---- GENITORI/PARENTI---->
+Faebook: https://facebook.ilsuo/com
+<---- GENITORI & PARENTI---->
 MAMMA:figlia di sua nonna
-
-PAPÀ:figlio di suo nonno
-
+PAÀ:figlio di suo nonno
 NONNO: papà del papà
-
 NONNA:mamma della mamma
-
 FRATELLO:figlio di sua mamma
-
 SORELLA:figlia di suo padre
-
 ܻ⨍ᨵׁׅׅtׁׅᨵׁׅׅ ժׁׅ݊ꫀׁׅܻ݊ᥣׁׅ֪ᥣׁׅ֪ɑׁׅ ׁׅ᥎ׁׅꪱׁׁׁׅׅׅtׁׅtׁׅꪱׁׁׁׅׅׅмα:
-
 ➖➖⬛⬛⬛⬛⬛
 ➖⬛⬛⬛🏼🏼⬛⬛
 ➖⬛⬛⬛🏼🏼🏼⬛
