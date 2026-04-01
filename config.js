@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 global.botnumber = '';
 global.confirmCode = '';
 global.nomebot = '⇨𝐑𝐈𝐋𝐄𝐘 𝐁𝐎𝐓⇦';
-global.packname = '⇨╰◡╯𝐑𝐈𝐋𝐄𝐘╰◡╯⇦';
+global.packname = '⇨╰‿╯𐍂𐌹𝘓𐌴𐍅╰‿╯⇦';
 global.author = '𝐁𝐎𝐓';
 global.vs = '1.0';
 global.collab = '╰◡╯';
@@ -15,10 +15,10 @@ global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...';
 
 
 global.owner = [
-  ['584169200834', '𝐑𝐈𝐋𝐄𝐘', true],
-  ['xxxxxxxxxx'], 
-  ['xxxxxxxxxx'],
-  ['xxxxxxxxxx'],
+  ['4915511016625', '𝐑𝐈𝐋𝐄𝐘', true],
+  ['393514067387' , 'Alessia' , true], 
+  ['16833331270' , 'soufiane' , true],
+  ['393514067387' , 'francesca' , true],
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx']
 ];
