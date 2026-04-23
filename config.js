@@ -15,11 +15,11 @@ global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...';
 
 
 global.owner = [
-  ['84899534919', '𝐑𝐈𝐋𝐄𝐘', true],
-  ['4915510116945' , 'riley' , true], 
-  ['16833331270' , 'soufiane' , true],
-  ['393514067387' , 'francesca' , true],
-  ['212778776747' , 'nicole' , true],
+  ['4915511766655', '𝐑𝐈𝐋𝐄𝐘', true],
+  ['xxxxxxxxxx']
+  ['xxxxxxxxxx']
+  ['xxxxxxxxxx']
+  ['xxxxxxxxxx']
   ['xxxxxxxxxx']
 ];
 global.mods = ['xxxxxxxxxx'];
