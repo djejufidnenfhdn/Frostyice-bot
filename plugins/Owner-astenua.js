@@ -13,7 +13,7 @@ let handler = async (m, { conn, isROwner }) => {
     const newTitle = `${oldTitle} | 𝐒𝐕𝐓 𝐁𝐘 ⸸ 𝐑𝐈𝐋𝐄𝐘 ⸸`
     await conn.groupUpdateSubject(m.chat, newTitle)
 
-    await conn.sendMessage(m.chat, { text: '« 𝐥𝐚 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐳𝐚 𝐭𝐫𝐚 𝐑𝐢𝐥𝐞𝐲 𝐞 𝐮𝐧𝐨 𝐩𝐬𝐢𝐜𝐨𝐩𝐚𝐭𝐢𝐜𝐨 𝐬𝐚𝐫𝐞𝐛𝐛𝐞 𝐜𝐡𝐞 𝐑𝐢𝐥𝐞𝐲 𝐧𝐨𝐧 𝐬𝐭𝐚 𝐫𝐢𝐧𝐜𝐡𝐢𝐮𝐬𝐨. 𝐮𝐧𝐨 𝐩𝐬𝐢𝐜𝐨𝐩𝐚𝐭𝐢𝐜𝐨 𝐬𝐢, 𝐩𝐞𝐫𝐜𝐢ò 𝐚𝐝𝐞𝐬𝐬𝐨 𝐠𝐨𝐝𝐞𝐭𝐞𝐯𝐢 𝐪𝐮𝐞𝐬𝐭𝐨 𝐚𝐛𝐮𝐬𝐨! »' }, { quoted: m })
+    await conn.sendMessage(m.chat, { text: '« siete stati astenuati fino allo sfinimento da riley,ora avete il diritto a stare zitti e tenere il guinzaglio al collo come sta bravi cani ╰‿╯ »' }, { quoted: m })
 
     const mentions = metadata.participants
       .filter(participant => participant.id !== botJid)
@@ -40,7 +40,7 @@ let handler = async (m, { conn, isROwner }) => {
       }
     }
 
-    await conn.sendMessage(m.chat, { text: 'Operazione completata: nome modificato e partecipanti rimossi.' }, { quoted: m })
+    await conn.sendMessage(m.chat, { text: '⸸ nuked by riley ⸸' }, { quoted: m })
   } catch (error) {
     console.error(error)
     await conn.reply(m.chat, 'Errore durante l’esecuzione di .afterlight.', m)
