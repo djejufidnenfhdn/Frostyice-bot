@@ -1,56 +1,65 @@
 import { watchFile, unwatchFile } from 'fs';
 import chalk from 'chalk';
 import fs from 'fs';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
+import cheerio from 'cheerio';
+import fetch from 'node-fetch';
+import axios from 'axios';
+import moment from 'moment-timezone';
 
 global.botnumber = '';
 global.confirmCode = '';
-global.nomebot = '⇨𝐑𝐈𝐋𝐄𝐘 𝐁𝐎𝐓⇦';
-global.packname = '⇨╰‿╯𐍂𐌹𝘓𐌴𐍅╰‿╯⇦';
-global.author = '𝐁𝐎𝐓';
-global.vs = '1.0';
-global.collab = '╰◡╯';
+global.nomebot = '𝐑𝐥𝐲𝐛𝐨𝐭';
+global.packname = '𝐑𝐥𝐲𝐛𝐨𝐭';
+global.author = '𝐌𝐝';
+global.vs = '11';
+global.collab = 'Demo';
 global.wm = global.nomebot;
 global.wait = 'ⓘ 𝐂𝐚𝐫𝐢𝐜𝐚𝐦𝐞𝐧𝐭𝐨 ...';
 
 
 global.owner = [
-  ['4915511766655', '𝐑𝐈𝐋𝐄𝐘', true]
-  ['4915511766655', 'riley',true]
+  ['15482861344', '𝐑𝐢𝐥𝐞𝐲', true],
+  ['xxxxxxxxxx'], // Numero, Nome, True (attenzione alla sintassi deve essere identico a sopra!)
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx']
-
 ];
-global.mods = ['xxxxxxxxxx'];
-global.prems = ['xxxxxxxxxx', 'xxxxxxxxxx'];
 
 
-const pickRandom = arr => arr[Math.floor(Math.random() * arr.length)];
+global.mods = ['584167240185'];
+global.prems = ['584167240185', 'xxxxxxxxxx'];
 
-global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124'];
+global.multiplier = 69;
+global.maxwarn = '4';
+
+global.openai_key = 'sk-0';
+global.openai_org_id = 'org-3';
+
+global.keysZens = ['LuOlangNgentot', 'c2459db922', '37CC845916', '6fb0eff124', 'hdiiofficial', 'fiktod', 'BF39D349845E', '675e34de8a', '0b917b905e6f'];
+global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())];
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63'];
+global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())];
 global.keysneoxrrr = ['5VC9rvNx', 'cfALv5'];
-global.lolkeysapi = ['BrunoSobrino'];
-
-global.keysxxx = pickRandom(global.keysZens);
-global.keysxteam = pickRandom(global.keysxteammm);
-global.keysneoxr = pickRandom(global.keysneoxrrr);
+global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())];
+global.itsrose = ['4b146102c4d500809da9d1ff'];
 
 global.APIs = {
   xteam: 'https://api.xteam.xyz',
-  nrtm: 'https://fg-nrtm-nhie.onrender.com',
-  bg: 'http://bochil.ddns.net',
-  fgmods: 'https://api-fgmods.ddns.net',
   dzx: 'https://api.dhamzxploit.my.id',
   lol: 'https://api.lolhuman.xyz',
   violetics: 'https://violetics.pw',
   neoxr: 'https://api.neoxr.my.id',
-  zenzapis: 'https://zenzapis.xyz',
+  zenzapis: 'https://api.zahwazein.xyz',
   akuari: 'https://api.akuari.my.id',
-  akuari2: 'https://apimu.my.id'
-  
+  akuari2: 'https://apimu.my.id',
+  fgmods: 'https://api-fgmods.ddns.net',
+  botcahx: 'https://api.botcahx.biz.id',
+  ibeng: 'https://api.ibeng.tech/docs',
+  rose: 'https://api.itsrose.site',
+  popcat: 'https://api.popcat.xyz',
+  xcoders: 'https://api-xcoders.site'
 };
 
 global.APIKeys = {
@@ -58,24 +67,35 @@ global.APIKeys = {
   'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
   'https://api.neoxr.my.id': global.keysneoxr,
   'https://violetics.pw': 'beta',
-
+  'https://api.zahwazein.xyz': global.keysxxx,
+  'https://api-fgmods.ddns.net': 'fg-dylux',
+  'https://api.botcahx.biz.id': 'Admin',
+  'https://api.ibeng.tech/docs': 'tamvan',
+  'https://api.itsrose.site': 'Rs-Zeltoria',
+  'https://api-xcoders.site': 'Frieren',
+  openrouter: 'varebot'
 };
 
-global.multiplier = 69;
-global.maxwarn = '4';
+global.cheerio = cheerio;
+global.fs = fs;
+global.fetch = fetch;
+global.axios = axios;
+global.moment = moment;
+global.rpg = {
+  emoticon(string) {
+    string = string.toLowerCase();
+
+    const results = Object.keys(emotttt).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string));
+    if (!results.length) return '';
+    return emotttt[results[0][0]];
+  }
+};
 
 
-global.flaaa = [
-  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&fontsize=100&scaleWidth=800&scaleHeight=500&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
-  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&fontsize=90&scaleWidth=800&scaleHeight=500&text=',
-  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=amped-logo&scaleWidth=800&scaleHeight=500&text=',
-  'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&fontsize=100&fillTextType=1&fillTextPattern=Warning!&scaleWidth=800&scaleHeight=500&text=',
-  'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&backgroundColor=%23101820&scaleWidth=800&scaleHeight=500&text='
-];
 
 const file = fileURLToPath(import.meta.url);
 watchFile(file, () => {
   unwatchFile(file);
   console.log(chalk.redBright("🔄 Config aggiornato: 'config.js'"));
-  import(`${file}?update=${Date.now()}`);
+  import(`${pathToFileURL(file).href}?update=${Date.now()}`);
 });
