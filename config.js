@@ -20,7 +20,7 @@ global.owner = [
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
   ['xxxxxxxxxx'],
-  ['xxxxxxxxxx']
+  ['xxxxxxxxxx'],
 
 ];
 global.mods = ['xxxxxxxxxx'];
