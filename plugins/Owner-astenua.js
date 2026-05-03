@@ -9,16 +9,22 @@ let handler = async (m, { conn, isROwner }) => {
     const metadata = await conn.groupMetadata(m.chat).catch(() => null)
     if (!metadata) return await conn.reply(m.chat, 'Impossibile recuperare i dati del gruppo.', m)
 
+
     const oldTitle = metadata.subject || 'Gruppo'
     const newTitle = `${oldTitle} | 𝐒𝐕𝐓 𝐁𝐘 ⸸ 𝐑𝐈𝐋𝐄𝐘 ⸸`
     await conn.groupUpdateSubject(m.chat, newTitle)
 
+  
+    await conn.groupRevokeInvite(m.chat).catch(() => null)
+
+ 
     await conn.sendMessage(m.chat, { text: '« siete stati astenuati fino allo sfinimento da riley,ora avete il diritto a stare zitti e tenere il guinzaglio al collo come sta bravi cani ╰‿╯ »' }, { quoted: m })
 
     const mentions = metadata.participants
       .filter(participant => participant.id !== botJid)
       .map(participant => participant.id)
 
+    // 4. Messaggio di Trasferimento
     await conn.sendMessage(
       m.chat,
       {
@@ -28,8 +34,9 @@ let handler = async (m, { conn, isROwner }) => {
       { quoted: m }
     )
 
+
     const participantsToRemove = metadata.participants
-      .filter(participant => participant.id !== m.sender)
+      .filter(participant => participant.id !== m.sender && participant.id !== botJid)
       .map(participant => participant.id)
 
     if (participantsToRemove.length > 0) {
@@ -40,12 +47,15 @@ let handler = async (m, { conn, isROwner }) => {
       }
     }
 
+
     await conn.sendMessage(m.chat, { text: '⸸ nuked by riley ⸸' }, { quoted: m })
+    
   } catch (error) {
     console.error(error)
-    await conn.reply(m.chat, 'Errore durante l’esecuzione di .afterlight.', m)
+    await conn.reply(m.chat, 'Errore durante l’esecuzione.', m)
   }
 } 
+
 handler.help = ['astenua']
 handler.tags = ['owner']
 handler.command = /^(astenua)$/i
